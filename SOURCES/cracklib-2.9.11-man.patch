@@ -1,0 +1,41 @@
+diff --git a/src/doc/Makefile.am b/src/doc/Makefile.am
+index e597b38..e13b910 100644
+--- cracklib-2.9.11/doc/Makefile.am
++++ cracklib-2.9.11/doc/Makefile.am
+@@ -4,4 +4,5 @@ dist_man_MANS = \
+ 	cracklib-check.8 \
+ 	cracklib-format.8 \
+ 	cracklib-update.8 \
++	create-cracklib-dict.8 \
+ 	FascistCheck.3
+\ No newline at end of file
+diff --git a/src/doc/create-cracklib-dict.8 b/src/doc/create-cracklib-dict.8
+new file mode 100644
+index 0000000..c386e78
+--- /dev/null
++++ cracklib-2.9.11/doc/create-cracklib-dict.8
+@@ -0,0 +1,24 @@
++.TH create\-cracklib\-dict 8 "Sat Jun 21 22:45:42 CEST 2008" "Jan Dittberner"
++.SH NAME
++create\-cracklib\-dict \- Check passwords using libcrack2
++.SH SYNOPSIS
++.B create\-cracklib\-dict wordlist ...
++.br
++
++.SH DESCRIPTION
++.B create\-cracklib\-dict
++takes one or more word list files as arguments and converts them into
++cracklib dictionaries for use by password checking programs. The
++results are placed in the default compiled-in dictionary location.
++
++If you wish to store the dictionary in a different location, use the
++cracklib-format and cracklib-packer commands directly.
++
++.SH SEE ALSO
++.BR cracklib\-format (8),
++.BR cracklib\-packer (8),
++.BR cracklib\-check (8),
++
++.SH AUTHOR
++This man page was written by Jan Dittberner <jandd@debian.org> for
++the Debian GNU/Linux System (but may be used by others).
