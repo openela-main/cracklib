@@ -5,7 +5,7 @@
 Summary: A password-checking library
 Name: cracklib
 Version: 2.9.6
-Release: 27%{?dist}
+Release: 28%{?dist}
 Source0: https://github.com/cracklib/cracklib/releases/download/cracklib-%{version}/cracklib-%{version}.tar.gz
 Source1: https://github.com/cracklib/cracklib/releases/download/cracklib-%{version}/cracklib-words-%{version}.gz
 
@@ -27,7 +27,7 @@ Patch7: cracklib-2.9.6-translation-updates.patch
 Patch8: cracklib-2.9.6-cve-2016-6318.patch
 Patch9: cracklib-2.9.6-coverity.patch
 Patch10: cracklib-2.9.6-lookup.patch
-URL: http://sourceforge.net/projects/cracklib/
+URL: https://github.com/cracklib/cracklib
 License: LGPLv2+
 BuildRequires: gcc
 BuildRequires: words, gettext
@@ -176,6 +176,9 @@ make test DESTDIR=$RPM_BUILD_ROOT
 %{_sbindir}/packer
 
 %changelog
+* Thu Jan 15 2026 Ganna Starovoytova <gstarovo@redhat.com> 2.9.6-28
+- update URL (RHEL-5215)
+
 * Mon Aug 09 2021 Mohan Boddu <mboddu@redhat.com> - 2.9.6-27
 - Rebuilt for IMA sigs, glibc 2.34, aarch64 flags
   Related: rhbz#1991688
@@ -605,7 +608,7 @@ make test DESTDIR=$RPM_BUILD_ROOT
 * Tue Apr 06 1999 Preston Brown <pbrown@redhat.com>
 - strip binaries
 
-* Sun Mar 21 1999 Cristian Gafton <gafton@redhat.com> 
+* Sun Mar 21 1999 Cristian Gafton <gafton@redhat.com>
 - auto rebuild in the new build environment (release 4)
 
 * Wed Jan 06 1999 Cristian Gafton <gafton@redhat.com>
